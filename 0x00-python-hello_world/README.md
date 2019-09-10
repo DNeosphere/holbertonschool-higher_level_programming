@@ -25,4 +25,4 @@ First approach to python programming language
 ## Author
 
 Daniela Gómez [LinkedIn](https://www.linkedin.com/in/daniela-g%C3%B3mez-2ba828187/)
-[Twitter](https://twitter.com/darkinss)# holbertonschool-low_level_programming]
+[Twitter](https://twitter.com/darkinss)
