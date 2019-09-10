@@ -5,6 +5,8 @@ if number < 0:
     last_d = number % -10
 elif number > 0:
     last_d = number % 10
+else:
+    last_d = 0
 str = "Last digit of"
 
 if last_d > 5:
