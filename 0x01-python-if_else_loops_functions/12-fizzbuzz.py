@@ -5,11 +5,11 @@ def fizzbuzz():
         if i == 100:
             print("Buzz ", end='')
             return
-        if i % 3 == 0 and i % 5 == 0:
+        elif i % 3 == 0 and i % 5 == 0:
             print("FizzBuzz ", end='')
-        if i % 3 == 0:
+        elif i % 3 == 0:
             print("Fizz ", end='')
-        if i % 5 == 0:
+        elif i % 5 == 0:
             print("Buzz ", end='')
         else:
             print("{} ".format(i), end='')
