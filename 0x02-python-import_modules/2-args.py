@@ -4,10 +4,10 @@ if __name__ == "__main__":
     len_argv = len(argv)
 
     if len_argv == 1:
-        print("0 arguments")
+        print("0 arguments.")
         exit()
     elif len_argv == 2:
-        print("1 argument:\n1: {}".format(argv[1]))
+        print("1 argument: \n1: {}".format(argv[1]))
     else:
         print("{} arguments:".format(len_argv - 1))
 
