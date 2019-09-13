@@ -12,9 +12,6 @@ if __name__ == "__main__":
     b = int(argv[3])
     op = argv[2]
 
-
-    print("{}".format(ord(argv[0])))
-
     if op == '+':
         print("{} {} {} = {}".format(a, op, b, add(a, b)))
     elif op == '-':
