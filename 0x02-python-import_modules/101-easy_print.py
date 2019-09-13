@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
-    import print_it_teehee
+import print_it_teehee
