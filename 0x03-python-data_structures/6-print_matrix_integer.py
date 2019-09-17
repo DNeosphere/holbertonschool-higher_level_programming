@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
+    if matrix is None:
+        return None
     i_in = 0
     i_out = 0
     for i_out in range(len(matrix)):
