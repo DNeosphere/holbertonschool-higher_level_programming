@@ -21,7 +21,7 @@ int is_palindrome(listint_t **head)
 	}
 
 	len = count -1;
-	while (len >= 0 && iter <= len)
+	while (iter <= len)
 	{
 		if (buffer[iter] != buffer[len])
 			return (0);
