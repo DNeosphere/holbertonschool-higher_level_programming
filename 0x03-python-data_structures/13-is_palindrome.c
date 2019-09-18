@@ -7,10 +7,10 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *temp = *head;
-	size_t count = 0, len = 0, iter = 0;
+	int count = 0, len = 0, iter = 0;
 	int buffer[1024];
 
-	if (head == NULL || *head == NULL || (*head)->next == NULL )
+	if (head == NULL)
 		return (1);
 
 	while (temp)
@@ -21,7 +21,7 @@ int is_palindrome(listint_t **head)
 	}
 
 	len = count -1;
-	while (iter <= (len))
+	while (len >= 0 && iter <= len)
 	{
 		if (buffer[iter] != buffer[len])
 			return (0);
