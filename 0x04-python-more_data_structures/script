@@ -1,0 +1,6 @@
+#!/bin/bash
+for i in {1..12}
+do
+    wget https://raw.githubusercontent.com/carlosz22/\
+holbertonschool-higher_level_programming/master/0x04-python-more_data_structures/$i-main.py
+done
