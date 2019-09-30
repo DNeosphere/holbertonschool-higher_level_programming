@@ -1,13 +1,11 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    try:
-        for i in my_list:
+    for i in my_list:
+        try:
             print("{}".format(i), end='')
-            if x == i:
-                break
-        print()
-
-    except:
-        pass
-
+        except:
+            pass
+        if x == i:
+            break
+    print()
     return i
