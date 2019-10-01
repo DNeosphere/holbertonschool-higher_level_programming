@@ -5,6 +5,7 @@ class Square:
         self.__position = position
 
     def area(self):
+        """ comment """
         return self.__size * self.__size
 
     @property
@@ -37,6 +38,7 @@ class Square:
         self.__position = value
 
     def my_print(self):
+        """ comment print"""
         if self.__size <= 0:
             print()
 
