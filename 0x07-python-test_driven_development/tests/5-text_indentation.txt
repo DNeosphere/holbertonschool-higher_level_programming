@@ -1,0 +1,50 @@
+The ``5-text_indentation`` module
+======================
+
+Using ``text_indentation``
+-------------------
+Takes a string and replaces ?:. for \n\n
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Usage:
+
+	>>> text_indentation('Daniela. Gomez')
+	Daniela.
+	<BLANKLINE>
+	Gomez
+
+==================
+
+	Pass something different thant a string
+	>>> text_indentation(3)
+	Traceback (most recent call last):
+    	TypeError: text must be a string
+
+	All delimiters together
+	>>> text_indentation('Hola .:?')
+	Hola .
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+
+	Just delimiters
+	>>> text_indentation('.:?')
+	.
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+
+	None argument
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation("")
+
+	>>> text_indentation("    h")
+	h

@@ -1,0 +1,48 @@
+The ``4-print_square`` module
+======================
+
+Using ``print_square``
+-------------------
+prints a squeare of a 'size' size. Size must be an integer greater than zero.
+
+>>> print_square = __import__('4-print_square').print_square
+
+====================
+
+Usage: print_square(size).
+
+Test cases:
+
+Non valid type for size:
+
+    Float type
+    >>> print_square(2.3)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    Negative Float
+    >>> print_square(-2.3)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+
+    Negative integer
+    >>> print_square(-1)
+    Traceback (most recent call last):
+    TypeError: size must be >= 0
+
+    String
+    >>> print_square('Holo')
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    Empty
+    >>> print_square()
+    Traceback (most recent call last):
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+    None
+    >>> print_square(None)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+

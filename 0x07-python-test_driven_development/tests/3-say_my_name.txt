@@ -40,3 +40,6 @@ Pass none arguments
 
      >>> say_my_name('Dani')
      My name is Dani 
+
+     >>> say_my_name("", "")
+     My name is  
