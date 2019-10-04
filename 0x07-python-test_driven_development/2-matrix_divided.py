@@ -22,7 +22,10 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError('division by zero')
 
-    if not isinstance(matrix, list):
+    if not isinstance(matrix, list) and isinstance(matrix, list):
+        raise TypeError(m_error)
+
+    if not isinstance(matrix[0], list):
         raise TypeError(m_error)
 
     comp_l = len(matrix[0])
