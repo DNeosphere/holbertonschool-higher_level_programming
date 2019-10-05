@@ -57,7 +57,6 @@ Matrix must be a list of list, any other type is forbidden:
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Matrix must have the same size:
-
     >>> matrix = [[1, 2, 3], [3, 4, 5 ,6]]
     >>> matrix_divided(matrix, 2)
     Traceback (most recent call last):
@@ -77,3 +76,8 @@ Missing two arguments
     >>> matrix_divided()
     Traceback (most recent call last):
     TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Div = float('inf')
+    >>> matrix = [[2, 4, 6], [8, 10, 12]]
+    >>> matrix_divided(matrix, float('inf'))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
