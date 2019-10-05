@@ -63,3 +63,17 @@ Matrix must have the same size:
     Traceback (most recent call last):
     TypeError: Each row of the matrix must have the same size
 
+Normal Usage:
+    >>> matrix = [[2, 4, 6], [8, 10, 12]]
+    >>> matrix_divided(matrix, 2)
+    [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+Missing one Argument
+    >>> matrix_divided(2)
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Missing two arguments
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'

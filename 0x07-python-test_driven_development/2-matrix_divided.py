@@ -4,6 +4,8 @@ Divides a matrix or lists if the elements are integers
 >>> matrix_divided(matrix, divisor)
 Outuput, every item with 2 float points
 """
+
+
 def matrix_divided(matrix, div):
     """
     Function that divdes a matrix of integers
@@ -44,7 +46,7 @@ def matrix_divided(matrix, div):
         for elem in range(len(matrix[row])):
 
             if (type(matrix[row][elem]) is not int and
-                type(matrix[row][elem]) is not float):
+                    type(matrix[row][elem]) is not float):
                 raise TypeError(m_error)
 
             res = round(matrix[row][elem] / div, 2)
