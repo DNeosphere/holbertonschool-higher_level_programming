@@ -4,6 +4,8 @@ Say my name prints
 >>> say_my_name('dani', 'gomez')
 Outuput, dani gomez
 """
+
+
 def say_my_name(first_name, last_name=""):
 
     if not isinstance(first_name, str) or first_name is None:
