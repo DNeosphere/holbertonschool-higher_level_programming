@@ -24,7 +24,7 @@ def add_integer(a, b=98):
         raise TypeError('b must be an integer')
 
     if (a + b) == float('inf') or (a + b) == -float('inf'):
-       raise OverflowError("Number too large")
+        raise OverflowError("Number too large")
 
     else:
         return int(a) + int(b)
