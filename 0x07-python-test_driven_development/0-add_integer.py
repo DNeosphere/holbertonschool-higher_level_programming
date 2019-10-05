@@ -4,6 +4,8 @@ adds two integers
 >>> add_integer(1,3)
 4
 """
+
+
 def add_integer(a, b=98):
     """
     Function that adds two integers
@@ -20,6 +22,9 @@ def add_integer(a, b=98):
 
     elif not isinstance(b, int) and not isinstance(b, float):
         raise TypeError('b must be an integer')
+
+    if (a + b) == float('inf') or (a + b) == -float('inf'):
+       raise OverflowError("Number too large")
 
     else:
         return int(a) + int(b)

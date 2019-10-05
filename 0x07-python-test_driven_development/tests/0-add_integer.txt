@@ -40,3 +40,8 @@ Pass no argument
 >>> add_integer()
 Traceback (most recent call last):
 TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Float overflow:
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+OverflowError: Number too large
