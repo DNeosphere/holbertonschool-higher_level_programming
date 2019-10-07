@@ -16,6 +16,8 @@ class Rectangle:
     def __str__(self):
         """ prints a graphical demonstration of the desired rectangle """
         rect = ""
+        if self.__height == 0 or self.__width == 0:
+            return rect
         for i in range(self.__height):
             rect += '#' * self.__width
             if i != self.__height - 1:
