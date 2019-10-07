@@ -6,26 +6,41 @@ Definition of a rectangle class
 
 class Rectangle:
     """ Rectangle definition """
+    number_of_instances = 0
+    print_symbol = '#'
+
     def __init__(self, width=0, height=0):
         """
         Initialization of the instances
         """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
+
+    def __del__(self):
+        """ Destructor MUAHAHA """
+        print('Bye rectangle...')
+        Rectangle.number_of_instances -= 1
 
     def __str__(self):
-        """ prints a graphical demonstration of the desired rectangle """
+        """ returns a graphical demonstration of the desired rectangle """
         rect = ""
         if self.__height == 0 or self.__width == 0:
             return rect
         for i in range(self.__height):
-            rect += '#' * self.__width
+            rect += str(self.print_symbol) * self.__width
             if i != self.__height - 1:
                 rect += '\n'
         return rect
 
+    def __repr__(self):
+        """ returns traditional formal string """
+        repr_str = self.__class__.__name__
+        return "{}({}, {})".format(repr_str, self.__width, self.__height)
+
     @property
     def width(width):
+        """ Width of the triangle """
         return self.__width
 
     @width.setter
@@ -40,6 +55,7 @@ class Rectangle:
 
     @property
     def height(height):
+        """ Height of the rectangle """
         return self.__height
 
     @height.setter
