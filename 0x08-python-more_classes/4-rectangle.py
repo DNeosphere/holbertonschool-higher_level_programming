@@ -59,7 +59,7 @@ class Rectangle:
 
     def area(self):
         """ Returns the rectangle area """
-        
+
         perim = self.__height * self.__width
         return perim
 
