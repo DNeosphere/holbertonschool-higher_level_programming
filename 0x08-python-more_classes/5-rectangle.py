@@ -34,7 +34,7 @@ class Rectangle:
         return "{}({}, {})".format(repr_str, self.__width, self.__height)
 
     @property
-    def width(width):
+    def width(self):
         """ Width of the triangle """
         return self.__width
 
@@ -49,7 +49,7 @@ class Rectangle:
         self.__width = width
 
     @property
-    def height(height):
+    def height(self):
         """ Height of the rectangle """
         return self.__height
 
@@ -73,7 +73,4 @@ class Rectangle:
 
     def perimeter(self):
         """ Returns the rectangle perimeter """
-        if self.__height == 0 or self.__width == 0:
-            return 0
-
         return 2 * (self.__width + self.__height)
