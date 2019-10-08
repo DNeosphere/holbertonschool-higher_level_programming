@@ -65,12 +65,11 @@ class Rectangle:
 
     def area(self):
         """ Returns the rectangle area """
-        if self.__height == 0 or self.__width == 0:
-            return 0
-
         perim = self.__height * self.__width
         return perim
 
     def perimeter(self):
         """ Returns the rectangle perimeter """
+        if self.__height == 0 or self.__width == 0:
+            return 0
         return 2 * (self.__width + self.__height)
