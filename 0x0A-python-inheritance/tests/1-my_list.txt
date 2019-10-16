@@ -1,1 +1,52 @@
-ss
+The ``1-my_list`` module
+======================
+
+Using ``my_list``
+-------------------
+
+My list is a class that inherits from integer, gets a list and print it sorted
+
+>>> MyList = __import__('1-my_list').MyList
+
+Usage:
+
+Create a list
+>>> n_list = MyList()
+>>> n_list.append(1)
+>>> n_list.append(6)
+>>> n_list.append(7)
+>>> n_list.append(4)
+>>> n_list.append(5)
+>>> n_list.append(2)
+>>> n_list.append(3)
+
+Print it normally
+>>> print(n_list)
+[1, 6, 7, 4, 5, 2, 3]
+
+Print it with the sorted method
+>>> n_list.print_sorted()
+[1, 2, 3, 4, 5, 6, 7]
+
+Change a number and print it sorted again
+>>> n_list[2] = 550
+>>> print(n_list)
+[1, 6, 550, 4, 5, 2, 3]
+>>> n_list.print_sorted()
+[1, 2, 3, 4, 5, 6, 550]
+
+Add a negative number
+>>> n_list = MyList()
+>>> n_list.append(1)
+>>> n_list.append(2)
+>>> n_list.append(3)
+>>> n_list.append(-1)
+>>> print(n_list)
+[1, 2, 3, -1]
+>>> n_list.print_sorted()
+[-1, 1, 2, 3]
+
+Print a empty list
+>>> n_list = MyList()
+>>> n_list.print_sorted()
+[]
