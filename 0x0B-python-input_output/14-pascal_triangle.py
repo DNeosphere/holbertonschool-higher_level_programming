@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 def pascal_triangle(n):
     if n <= 0:
-        n_list = []
-        return n_list
+        return []
 
     pascal = [[1], [1, 1]]
     n_list = []
