@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ definition of a class Base """
 import json
+from turtle import *
 
 
 class Base:
@@ -60,3 +61,16 @@ class Base:
                 return instance_l
         except:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        for figure in list_rectangles:
+            color("pink")
+            setpos(figure.x, figure.y)
+            fd(figure.width)
+            right(90)
+            fd(figure.height)
+            right(90)
+            fd(figure.width)
+            right(90)
+            fd(figure.height)
