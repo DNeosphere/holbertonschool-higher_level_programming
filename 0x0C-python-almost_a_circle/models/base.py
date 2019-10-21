@@ -64,13 +64,32 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        for figure in list_rectangles:
-            color("pink")
-            setpos(figure.x, figure.y)
-            fd(figure.width)
+        """ draws using turtle """
+        for rec in list_rectangles:
+            setpos(rec.x, rec.y)
+            width(4)
+            pencolor('red')
+            forward(rec.width)
             right(90)
-            fd(figure.height)
+            forward(rec.height)
             right(90)
-            fd(figure.width)
+            forward(rec.width)
             right(90)
-            fd(figure.height)
+            forward(rec.height)
+            right(90)
+            width(0)
+
+        setpos(0, 0)
+        for sqr in list_squares:
+            pencolor('blue')
+            setpos(sqr.x, sqr.y)
+            width(7)
+            forward(sqr.width)
+            right(90)
+            forward(sqr.width)
+            right(90)
+            forward(sqr.width)
+            right(90)
+            forward(sqr.width)
+            right(90)
+            width(0)
