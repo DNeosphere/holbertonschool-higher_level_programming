@@ -57,11 +57,11 @@ class Rectangle(Base):
         if type(value) is not int:
             raise TypeError('x must be an integer')
 
-        elifif value < 0:
+        elif value < 0:
             raise ValueError('x must be >= 0')
 
         else:
-            self.x = value
+            self.__x = value
 
     @property
     def y(self):
