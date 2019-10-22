@@ -107,10 +107,10 @@ class Base:
         filename = cls.__name__ + ".csv"
         with open(filename, mode='w', encoding='utf-8') as file:
             if cls.__name__ == "Rectangle":
-                value_dict = {"width":"width", "height":"height", "x":"x", "y":"y", "id":"id"}
+                value_dict = {"width": "width", "height": "height", "x": "x", "y": "y", "id": "id"}
                 names_list = ["width", "height", "x", "y", "id"]
             else:
-                value_dict = {"size":"size", "x":"x", "y":"y", "id":"id"}
+                value_dict = {"size": "size", "x": "x", "y": "y", "id": "id"}
                 names_list = ["size", "x", "y", "id"]
 
             written_f = csv.DictWriter(file, fieldnames = names_list)
