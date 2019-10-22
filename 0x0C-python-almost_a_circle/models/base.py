@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ definition of a class Base """
 import json
+import csv
 from turtle import *
 
 
@@ -98,3 +99,40 @@ class Base:
             forward(sqr.width)
             right(90)
             width(0)
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ serializes to Csv """
+        flag = 0
+        filename = cls.__name__ + ".csv"
+        with open(filename, mode='w', encoding='utf-8') as file:
+            if cls.__name__ == "Rectangle":
+                value_dict = {"width":"width", "height":"height", "x":"x", "y":"y", "id":"id"}
+                names_list = ["width", "height", "x", "y", "id"]
+            else:
+                value_dict = {"size":"size", "x":"x", "y":"y", "id":"id"}
+                names_list = ["size", "x", "y", "id"]
+
+            written_f = csv.DictWriter(file, fieldnames = names_list)
+            for instance in list_objs:
+                if flag == 0:
+                    written_f.writerow(value_dict)
+                    flag += 1
+                written_f.writerow(instance.to_dictionary())
+    @classmethod
+    def load_from_file_csv(cls):
+        """ deserializes csv """
+        filename = cls.__name__ + ".csv"
+        with open(filename, mode='r', encoding='utf-8') as a_file:
+            instance_dict = {}
+            instance_array = []
+
+            csv_file = csv.DictReader(a_file)
+            for instance in csv_file:
+                for key, value in instance.items():
+                    instance_dict[key] = int(value)
+                inst = cls.create(**instance_dict)
+                instance_array.append(inst)
+            return instance_array
+
+
