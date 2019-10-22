@@ -113,12 +113,13 @@ class Base:
                 value_dict = {"size": "size", "x": "x", "y": "y", "id": "id"}
                 names_list = ["size", "x", "y", "id"]
 
-            written_f = csv.DictWriter(file, fieldnames = names_list)
+            written_f = csv.DictWriter(file, fieldnames=names_list)
             for instance in list_objs:
                 if flag == 0:
                     written_f.writerow(value_dict)
                     flag += 1
                 written_f.writerow(instance.to_dictionary())
+
     @classmethod
     def load_from_file_csv(cls):
         """ deserializes csv """
