@@ -2,21 +2,23 @@
 """
 Selects all states from a db
 """
-import MySQLdb
-from sys import argv
+if __name__ == "__main__":
 
-db = MySQLdb.connect(host="127.0.0.1", user=argv[1],
-                     passwd=argv[2], db=argv[3])
+    import MySQLdb
+    from sys import argv
 
-cur = db.cursor()
+    db = MySQLdb.connect(host="127.0.0.1", user=argv[1],
+                         passwd=argv[2], db=argv[3])
 
-cur.execute("SELECT * FROM states \
-            WHERE name = '{:s}' \
-            ORDER BY states.id ASC;".format(argv[4]))
-states = cur.fetchall()
+    cur = db.cursor()
 
-for state in states:
-    print(state)
+    cur.execute("SELECT * FROM states \
+    WHERE name = '{:s}' \
+    ORDER BY states.id ASC;".format(argv[4]))
+    states = cur.fetchall()
 
-cur.close()
-db.close()
+    for state in states:
+        print(state)
+
+    cur.close()
+    db.close()
