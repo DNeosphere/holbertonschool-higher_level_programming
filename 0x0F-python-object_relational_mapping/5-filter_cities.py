@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
     ciudades = []
 
-    for item in rows:
+    for item in states:
         ciudades.append(item[0])
 
     lista = ", ".join(ciudades)
