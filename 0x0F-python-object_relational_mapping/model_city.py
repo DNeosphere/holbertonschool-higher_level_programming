@@ -8,6 +8,7 @@ from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from model_state import Base
 
+
 class City(Base):
     """ City class, linked to Cities database """
     __tablename__ = 'cities'
