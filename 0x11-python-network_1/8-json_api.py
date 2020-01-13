@@ -10,14 +10,13 @@ if __name__ == "__main__":
         dato = {'q': ""}
         pass
 
-    req = requests.post('http://0.0.0.0:5000/search_user', data=dato)
-    req_json = req.json()
-
-    if len(req_json) == 0:
-        print("No result")
-
-    else:
-        try:
+    try:
+        req = requests.post('http://0.0.0.0:5000/search_user', data=dato)
+        req_json = req.json()
+        if 'id' not in req_json or 'name' not in req_json:
+            print("No result")
+        else:
             print("[{}] {}".format(req_json.get('id'), req_json.get('name')))
-        except Exception:
+
+    except Exception:
             print("Not a valid JSON")
