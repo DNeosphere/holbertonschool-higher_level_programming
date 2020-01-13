@@ -4,8 +4,6 @@ from sys import argv
 
 if __name__ == "__main__":
 
-    if len(argv) != 2:
-        print("No result")
     try:
         dato = {'q': argv[1]}
     except Exception:
