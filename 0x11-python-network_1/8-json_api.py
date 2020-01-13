@@ -18,6 +18,6 @@ if __name__ == "__main__":
 
     else:
         try:
-            print("[{}] {}".format(req_json['id'], req_json['name']))
+            print("[{}] {}".format(req_json.get('id'), req_json.get('name')))
         except Exception:
             print("Not a valid JSON")
