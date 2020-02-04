@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-let len = 0
-for (const i in process.argv){
+let len = 0;
+for (len in process.argv) {
   len++;
 }
 
