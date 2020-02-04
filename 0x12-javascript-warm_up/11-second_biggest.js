@@ -9,7 +9,6 @@ if (argv.length <= 3) {
 
   nArray.sort(function (a, b) { return a - b; });
   const uArray = [...new Set(nArray)];
-  console.log(uArray);
   uArray.pop();
   console.log(uArray[uArray.length - 1]);
 }
