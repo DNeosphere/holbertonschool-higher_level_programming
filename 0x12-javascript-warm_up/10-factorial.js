@@ -5,12 +5,13 @@ const numA = parseInt(argv[2]);
 
 function factorial (n) {
   if (isNaN(n)) {
-    console.log(1);
+    return 1;
   } else if (n === 0) {
     return 1;
   } else {
     return n * factorial(n - 1);
   }
 }
-
-console.log(factorial(numA));
+if (!parseInt(numA)) {
+  console.log(factorial(numA));
+}
