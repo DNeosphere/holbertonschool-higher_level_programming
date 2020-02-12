@@ -1,20 +1,23 @@
 #!/usr/bin/node
 
-const request = require('request');
-const argv = process.argv;
-const url = argv[2];
+const url = process.argv[2];
+const req = require('request');
 
-request(url, function (error, response, body) {
-  if (error) throw error;
+req(url, (err, res, body) => {
+  if (err) console.log(err);
+  const completed = {};
+  const obj = JSON.parse(body);
+  for (const i in obj) {
+    const task = obj[i];
+    const userID = obj[i].userId;
 
-  const toDos = JSON.parse(body);
-
-  const completed = toDos.filter((elem) => elem.completed === true);
-
-  const toDosId = {};
-  for (let person = 1; person <= 10; person++) {
-    toDosId[person] = (completed.filter((elem) => elem.userId === person)).length;
+    if (task.completed) {
+      if (completed[userID] === undefined) {
+        completed[userID] = 1;
+      } else {
+        completed[userID] += 1;
+      }
+    }
   }
-
-  console.log(toDosId);
+  console.log(completed);
 });
