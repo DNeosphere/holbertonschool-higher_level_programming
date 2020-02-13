@@ -1,15 +1,12 @@
 #!/usr/bin/node
 
-
-
 $('#toggle_header').click(function(){
     if ($('header').hasClass('red')) {
-        $('header').toggleClass('green');
+        $('header').removeClass('red');
+        $('header').addClass('green');
     }
-    else {
-        $('header').toggleClass('red');
+    else if ($('header').hasClass('green')){
+        $('header').removeClass('green');
+        $('header').addClass('red');
     }
 })
-
-
-$("header").addClass('red');
