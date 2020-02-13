@@ -1,6 +1,5 @@
 #!/usr/bin/node
 
-
-$(function() {
-    $('header').css('color', 'red');
-})
+$(function () {
+  $('header').css('color', 'red');
+});
